@@ -5,7 +5,7 @@ Builder categories for `NSURL` and `NSDate`. The builder category adds a builder
 
 ## Example
 
-    NSDate *testDate = [NSDate dateWithBuilderBlock:^(NSDateComponents *builder) {
+    NSDate *testDate = [NSDate gregorianDateWithBuilderBlock:^(NSDateComponents *builder) {
         builder.year = 2014;
         builder.month = 4;
         builder.day = 8;
