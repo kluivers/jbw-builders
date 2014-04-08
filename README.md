@@ -3,6 +3,12 @@ jbw-builders
 
 Builder categories for `NSURL` and `NSDate`. The builder category adds a builder pattern based convenience initializer to easily build these classes. Instead of creating a custom builder object, the build in foundation `NS*Components` objects are used.
 
+
+By **Joris Kluivers**
+
+- Accompanying blog post: [The Builder Pattern in Objective-C Foundation](http://joris.kluivers.nl/blog/2014/04/08/the-builder-pattern-in-objective-c-foundation/)
+- Follow [@kluivers on Twitter](http://twitter.com/kluivers)
+
 ## Example
 
     NSDate *testDate = [NSDate gregorianDateWithBuilderBlock:^(NSDateComponents *builder) {
