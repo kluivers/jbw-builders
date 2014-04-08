@@ -1,7 +1,7 @@
 jbw-builders
 ============
 
-Builder categories for `NSURL` and `NSDate`. The builder category adds a builder pattern based convenience initializer to easily build thise classes. Instead of creating a custom builder object, the build in foundation `NS*Components` objects are used.
+Builder categories for `NSURL` and `NSDate`. The builder category adds a builder pattern based convenience initializer to easily build these classes. Instead of creating a custom builder object, the build in foundation `NS*Components` objects are used.
 
 ## Example
 
