@@ -12,11 +12,11 @@
 
 + (instancetype) URLWithBuilderBlock:(void(^)(NSURLComponents *))builderBlock
 {
+    NSParameterAssert(builderBlock);
+    
     NSURLComponents *builder = [[NSURLComponents alloc] init];
     
-    if (builderBlock) {
-        builderBlock(builder);
-    }
+    builderBlock(builder);
     
     return [builder URL];
 }

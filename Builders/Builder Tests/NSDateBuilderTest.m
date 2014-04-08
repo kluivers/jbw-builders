@@ -30,12 +30,14 @@
 
 - (void)testExampleDate
 {
+    NSCalendar *calendar = [NSCalendar calendarWithIdentifier:NSCalendarIdentifierGregorian];
+    
     NSDate *testDate = [NSDate dateWithBuilderBlock:^(NSDateComponents *builder) {
         builder.year = 2014;
         builder.month = 4;
         builder.day = 8;
         builder.hour = 12;
-    }];
+    } calendar:calendar];
     
     XCTAssertNotNil(testDate, @"Resulting date cannot be nil");
 }

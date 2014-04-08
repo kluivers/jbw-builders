@@ -10,6 +10,7 @@
 
 @interface NSDate (JBWBuilders)
 
-+ (instancetype) dateWithBuilderBlock:(void(^)(NSDateComponents *builder))builderBlock;
++ (instancetype) gregorianDateWithBuilderBlock:(void(^)(NSDateComponents *builder))builderBlock;
++ (instancetype) dateWithBuilderBlock:(void(^)(NSDateComponents *builder))builderBlock calendar:(NSCalendar *)calendar;
 
 @end

@@ -10,20 +10,21 @@
 
 @implementation NSDate (JBWBuilders)
 
-+ (instancetype) dateWithBuilderBlock:(void(^)(NSDateComponents *builder))builderBlock
++ (instancetype) gregorianDateWithBuilderBlock:(void (^)(NSDateComponents *))builderBlock
 {
-    NSCalendar *calendar = [NSCalendar currentCalendar];
+    NSCalendar *calendar = [NSCalendar calendarWithIdentifier:NSCalendarIdentifierGregorian];
     
     return [self dateWithBuilderBlock:builderBlock calendar:calendar];
 }
 
 + (instancetype) dateWithBuilderBlock:(void (^)(NSDateComponents *))builderBlock calendar:(NSCalendar *)calendar
 {
+    NSParameterAssert(builderBlock);
+    NSParameterAssert(calendar);
+    
     NSDateComponents *builder = [[NSDateComponents alloc] init];
     
-    if (builderBlock) {
-        builderBlock(builder);
-    }
+    builderBlock(builder);
     
     return [calendar dateFromComponents:builder];
 }
